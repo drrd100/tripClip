@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Pretendard',sans-serif;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,13 +29,17 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+input:focus{
+	outline: none;
+}
 body {
 	line-height: 1;
-    font-family: 'MuseumClassic', 'Noto Sans KR', sans-serif;
-}
-.txt{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: Pretendard, sans-serif;
 }
 ol, ul {
 	list-style: none;

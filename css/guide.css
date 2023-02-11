@@ -1,0 +1,98 @@
+/* search wrap */
+.search_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search_wrap .input_wrap{
+    width: 678px;
+    height: 64px;
+    margin-right: 14px;
+    border-radius: 18px;
+    border: 1px solid #D4D4D4;
+    background-color: #FBFBFB;
+}
+.search_wrap .input_wrap input{
+    width: calc(100% - 86px);
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.search_wrap .input_wrap input::placeholder{
+    color: #d4d4d4;
+}
+.search_wrap .input_wrap button{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #7b7b7b;
+    padding-right: 18px;
+}
+.search_wrap .input_wrap button::after{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_gray_arrow01.svg") no-repeat center 2px / cover;
+}
+.search_wrap .search_btn{
+    width: 102px;
+    height: 64px;
+}
+.search_wrap .filter_wrap{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 10;
+    transform: translateX(-50%);
+    width: calc(100% - 72px);
+    max-width: 1128px;
+    padding: 0 52px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 4px 12px 12px rgba(219, 219, 219, 0.25);
+    border-radius: 24px;
+}
+.search_wrap .filter_wrap .filter_group{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+.search_wrap .filter_wrap .filter_box .tit{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/* search wrap end */
+
+
+
+
+/* button */
+.btn_common{
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn_common.btn_blue{
+    background-color: #005184;
+    color: #fff;
+    transition: background-color .3s, box-shadow .3s;
+}
+.btn_common.btn_blue.shadow{
+    box-shadow: 2px 4px 16px rgba(0, 81, 132, 0.2);
+}
+.btn_common.btn_blue.shadow:hover{
+    background-color: #004a78;
+    box-shadow: 2px 4px 13px rgba(0, 81, 132, 0.4);
+}
+/* button end */
