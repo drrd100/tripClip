@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    font-family: 'MuseumClassic', 'Noto Sans KR', sans-serif;
+}
+.txt{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+i img{
+	width: 100%;
+}
+button{
+	background: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+}
+button:focus{outline: none;}
+
+/* 스크롤 바 커스텀 */
+.scrollbar_custom::-webkit-scrollbar {width: 18px;}
+.scrollbar_custom::-webkit-scrollbar-track {border-radius: 10px;}
+.scrollbar_custom::-webkit-scrollbar-thumb {background-color: #bcc5db; border-radius: 10px; border: 6px solid #F4FBFF; }
+
+.m_show{display: none !important;}
+.m_hide{display: block !important;}
+
+.scrollLock {
+	overflow: hidden;
+}
+
+@media all and (max-width:1024px){
+	.m_show{display: block !important;}
+	.m_hide{display: none !important;}
+}
