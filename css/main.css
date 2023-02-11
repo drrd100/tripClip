@@ -1,0 +1,20 @@
+.inner{max-width: 1200px; margin: 0 auto;}
+/*
+    header
+*/
+
+
+/*
+    footer
+*/
+#footer{padding: 40px 0 50px; border-top: 1px solid #E7E7E7;}
+#footer .top{display: flex; justify-content: space-between; margin-bottom: 30px;}
+#footer .top > a{display: inline-block; width: 162px;}
+#footer .top .sns{display: flex;}
+#footer .top .sns li + li{margin-left: 25px;}
+#footer .top .sns li a{display: inline-block; width: 32px;}
+#footer .poliy{display: flex; justify-content: flex-start; align-items: center; margin-bottom: 15px;}
+#footer .poliy li + li{position: relative; margin-left: 15px; padding-left: 15px;}
+#footer .poliy li + li::before{content: ''; position: absolute; top: 42%; left: 0; transform: translateY(-50%); width: 2px; height: 14px; background-color: #737373;}
+#footer .poliy li a{display: inline-block; font-size: 18px; line-height: 1.3em; font-weight: 700; color: #737373;}
+#footer .company p{font-size: 16px; color: #737373; line-height: 1.3em;}
