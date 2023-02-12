@@ -23,8 +23,8 @@
                 <div class="filter_box">
                     <p class="tit">촬영 장비</p>
                     <div class="select_wrap">
-                        <button class="select_btn">전부</button>
                         <ul>
+                            <button class="select_btn">전부</button>
                             <li><button>전부</button></li>
                             <li><button>드론</button></li>
                             <li><button>스마트폰</button></li>
@@ -39,8 +39,8 @@
                 <div class="filter_box">
                     <p class="tit">촬영 형식</p>
                     <div class="select_wrap">
-                        <button class="select_btn">전부</button>
                         <ul>
+                            <button class="select_btn">전부</button>
                             <li><button>전부</button></li>
                             <li><button>일반</button></li>
                             <li><button>슬로우</button></li>
@@ -52,8 +52,8 @@
                 <div class="filter_box">
                     <p class="tit">카테고리</p>
                     <div class="select_wrap">
-                        <button class="select_btn">전부</button>
                         <ul>
+                            <button class="select_btn">전부</button>
                             <li><button>전부</button></li>
                             <li><button>일반</button></li>
                             <li><button>인물</button></li>
@@ -76,8 +76,8 @@
                 <div class="middle">
                     <div class="multi-range-slider">
                       <!-- 진짜 슬라이더 -->
-                      <input type="range" id="input-left" min="0" max="100" value="25" />
-                      <input type="range" id="input-right" min="0" max="100" value="75" />
+                      <input type="range" id="input-left" min="1000" max="100000" value="1000" step="1000" />
+                      <input type="range" id="input-right" min="1000" max="100000" value="100000"  step="1000" />
                   
                       <!-- 커스텀 슬라이더 -->
                       <div class="slider">
@@ -87,13 +87,16 @@
                         <div class="thumb right"></div>
                       </div>
                     </div>
-                    <div class="range_text">
-                        <span class="min_txt">1000</span>
-                        <span class="max_txt">100000</span>
-                    </div>
-                    <div class="checkbox_wrap">
-                        <input type="checkbox" id="fps_checkbox">
-                        <label for="fps_checkbox">60 fps 초과</label>
+                    <div class="middle_bottom">
+                        <div class="range_text">
+                            <span class="min_txt">1000</span>
+                            -
+                            <span class="max_txt">100000</span>
+                        </div>
+                        <div class="checkbox_wrap">
+                            <input type="checkbox" id="fps_checkbox">
+                            <label for="fps_checkbox">60 fps 초과</label>
+                        </div>
                     </div>
                 </div>
             </div>
