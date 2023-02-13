@@ -1,0 +1,102 @@
+/* icons setting */
+.ico_star{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_star.svg") no-repeat center / cover;
+    transition: background .15s;
+}
+.ico_star.active{
+    background: url("../images/icons/ico_star_active.svg") no-repeat center / cover;
+}
+.ico_share{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_share.svg") no-repeat center / cover;
+}
+.ico_crown{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_crown.svg") no-repeat center / cover;
+}
+.ico_user{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_user.svg") no-repeat center / cover;
+}
+.ico_cart{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_cart.svg") no-repeat center / cover;
+}
+.ico_coupon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_coupon.svg") no-repeat center / cover;
+}
+.ico_file{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_file.svg") no-repeat center / cover;
+}
+.ico_img_user{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_img_user.svg") no-repeat center / cover;
+}
+.ico_user_up{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_user_up.svg") no-repeat center / cover;
+}
+.ico_gray_arrow{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_gray_arrow.svg") no-repeat center / cover;
+}
+.ico_blue_arrow{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_blue_arrow.svg") no-repeat center / cover;
+}
+.ico_gray_close{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_gray_close.svg") no-repeat center / cover;
+}
+.ico_check{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_check.svg") no-repeat center / cover;
+}
+.ico_checked{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_checked.svg") no-repeat center / cover;
+}
+.ico_facebook{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("../images/icons/ico_facebook.svg") no-repeat center / cover;
+}
+.ico_instagram{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("../images/icons/ico_instagram.svg") no-repeat center / cover;
+}
+/* icons setting end */
