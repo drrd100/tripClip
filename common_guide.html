@@ -9,94 +9,195 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/icons.css">
     <link rel="stylesheet" href="./css/guide.css">
+
+    <style>
+        .compo_box{
+            border-bottom: 1px solid rgb(230, 230, 230);
+            padding-bottom: 100px;
+        }
+        h1{
+            font-size: 40px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            margin-bottom: 40px;
+            text-align: center;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
-    <div class="search_wrap">
-        <div class="input_wrap">
-            <input type="text" placeholder="나라이름을 검색해보세요!">
-            <button type="button">필터</button>
+    <div class="compo_box">
+        <h1>필터</h1>
+        <div class="search_wrap">
+            <div class="input_wrap">
+                <input type="text" placeholder="나라이름을 검색해보세요!">
+                <button type="button" class="filter_open_btn">필터</button>
+            </div>
+            <button class="btn_common btn_blue shadow search_btn">검색</button>
+            <div class="filter_wrap">
+                <div class="filter_group">
+                    <div class="filter_box">
+                        <p class="tit">촬영 장비</p>
+                        <div class="select_wrap">
+                            <ul>
+                                <li><button class="select_btn">전부</button></li>
+                                <li><button>전부</button></li>
+                                <li><button>드론</button></li>
+                                <li><button>스마트폰</button></li>
+                                <li><button>DSLR</button></li>
+                                <li><button>짐벌</button></li>
+                                <li><button>슬라이드</button></li>
+                                <li><button>액션 캠</button></li>
+                                <li><button>기타</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter_box">
+                        <p class="tit">촬영 형식</p>
+                        <div class="select_wrap">
+                            <ul>
+                                <li><button class="select_btn">전부</button></li>
+                                <li><button>전부</button></li>
+                                <li><button>일반</button></li>
+                                <li><button>슬로우</button></li>
+                                <li><button>타임랩스</button></li>
+                                <li><button>하이퍼 랩스</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter_box">
+                        <p class="tit">카테고리</p>
+                        <div class="select_wrap">
+                            <ul>
+                                <li><button class="select_btn">전부</button></li>
+                                <li><button>전부</button></li>
+                                <li><button>일반</button></li>
+                                <li><button>인물</button></li>
+                                <li><button>자연</button></li>
+                                <li><button>동물</button></li>
+                                <li><button>랜드 마크</button></li>
+                                <li><button>음식</button></li>
+                                <li><button>비즈니스</button></li>
+                                <li><button>예술</button></li>
+                                <li><button>기술</button></li>
+                                <li><button>크리에이터</button></li>
+                                <li><button>체험</button></li>
+                                <li><button>기계</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter_box">
+                    <p class="tit">가격(KRW)</p>
+                    <div class="middle">
+                        <div class="multi-range-slider">
+                          <!-- 진짜 슬라이더 -->
+                          <input type="range" id="input-left" min="1000" max="100000" value="1000" step="1000" />
+                          <input type="range" id="input-right" min="1000" max="100000" value="100000"  step="1000" />
+                      
+                          <!-- 커스텀 슬라이더 -->
+                          <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                          </div>
+                        </div>
+                        <div class="middle_bottom">
+                            <div class="range_text">
+                                <span class="min_txt">1000</span>
+                                -
+                                <span class="max_txt">100000</span>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="fps_checkbox">
+                                <label for="fps_checkbox">60 fps 초과</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="btn_common btn_blue shadow search_btn">검색</button>
-        <div class="filter_wrap">
-            <div class="filter_group">
-                <div class="filter_box">
-                    <p class="tit">촬영 장비</p>
-                    <div class="select_wrap">
-                        <button class="select_btn">전부</button>
-                        <ul>
-                            <li><button>전부</button></li>
-                            <li><button>드론</button></li>
-                            <li><button>스마트폰</button></li>
-                            <li><button>DSLR</button></li>
-                            <li><button>짐벌</button></li>
-                            <li><button>슬라이드</button></li>
-                            <li><button>액션 캠</button></li>
-                            <li><button>기타</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter_box">
-                    <p class="tit">촬영 형식</p>
-                    <div class="select_wrap">
-                        <button class="select_btn">전부</button>
-                        <ul>
-                            <li><button>전부</button></li>
-                            <li><button>일반</button></li>
-                            <li><button>슬로우</button></li>
-                            <li><button>타임랩스</button></li>
-                            <li><button>하이퍼 랩스</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter_box">
-                    <p class="tit">카테고리</p>
-                    <div class="select_wrap">
-                        <button class="select_btn">전부</button>
-                        <ul>
-                            <li><button>전부</button></li>
-                            <li><button>일반</button></li>
-                            <li><button>인물</button></li>
-                            <li><button>자연</button></li>
-                            <li><button>동물</button></li>
-                            <li><button>랜드 마크</button></li>
-                            <li><button>음식</button></li>
-                            <li><button>비즈니스</button></li>
-                            <li><button>예술</button></li>
-                            <li><button>기술</button></li>
-                            <li><button>크리에이터</button></li>
-                            <li><button>체험</button></li>
-                            <li><button>기계</button></li>
-                        </ul>
-                    </div>
-                </div>
+    </div>
+
+    <div class="compo_box">
+        <h1>버튼 & 태그</h1>
+        <p>*모든 사이즈는 디자인대로 변경해서 사용*</p>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <button class="btn_common btn_blue shadow" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_green shadow" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_yellow" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_gray" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_strok_white" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_strok_gray" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_strok_blue" style="width: 100px; height: 40px;">버튼</button>
+            <button class="btn_common btn_strok_black" style="width: 100px; height: 40px;">버튼</button>
+        </div>
+    </div>
+
+    <div class="compo_box">
+        <h1>셀렉트</h1>
+        <p>*모든 사이즈는 디자인대로 변경해서 사용*</p>
+        <div class="select_wrap" style="width: 200px; margin: 0 auto;">
+            <ul>
+                <li><button class="select_btn">전부</button></li>
+                <li><button>프로틴 쉐이크</button></li>
+                <li><button>드레싱 없는 샐러드</button></li>
+                <li><button>고구마</button></li>
+                <li><button>닭가슴살</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="compo_box">
+        <h1>체크박스</h1>
+        <p>*모든 사이즈는 디자인대로 변경해서 사용*</p>
+        <div style="width: max-content; margin: 0 auto;">
+            <div class="checkbox_wrap">
+                <input type="checkbox" id="test_checkbox">
+                <label for="test_checkbox">덤밸 사용</label>
             </div>
-            <div class="filter_box">
-                <p class="tit">가격(KRW)</p>
-                <div class="middle">
-                    <div class="multi-range-slider">
-                      <!-- 진짜 슬라이더 -->
-                      <input type="range" id="input-left" min="0" max="100" value="25" />
-                      <input type="range" id="input-right" min="0" max="100" value="75" />
-                  
-                      <!-- 커스텀 슬라이더 -->
-                      <div class="slider">
-                        <div class="track"></div>
-                        <div class="range"></div>
-                        <div class="thumb left"></div>
-                        <div class="thumb right"></div>
-                      </div>
-                    </div>
-                    <div class="range_text">
-                        <span class="min_txt">1000</span>
-                        <span class="max_txt">100000</span>
-                    </div>
-                    <div class="checkbox_wrap">
-                        <input type="checkbox" id="fps_checkbox">
-                        <label for="fps_checkbox">60 fps 초과</label>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
+
+    <div class="compo_box">
+        <h1>아이콘</h1>
+        <p>*모든 사이즈는 디자인대로 변경해서 사용 ( 아이콘은 클래스만 사용해도 상관 없음~ 찡긋 )*
+            <br>
+            *아이콘이 반대로 돌아가 있는 경우 transform : rotate(...deg)*
+        </p>
+        <div style="display: flex; gap: 20px; align-items: center; width: max-content; margin: 0 auto;">
+            <i class="ico_star"></i>
+            <i class="ico_star active"></i>
+            <i class="ico_share"></i>
+            <i class="ico_crown"></i>
+            <i class="ico_user"></i>
+            <i class="ico_cart"></i>
+            <i class="ico_coupon"></i>
+            <i class="ico_file"></i>
+            <i class="ico_img_user"></i>
+            <i class="ico_user_up"></i>
+            <i class="ico_gray_arrow"></i>
+            <i class="ico_blue_arrow"></i>
+            <i class="ico_gray_close"></i>
+            <i class="ico_check"></i>
+            <i class="ico_checked"></i>
+            <i class="ico_facebook"></i>
+            <i class="ico_instagram"></i>
+        </div>
+    </div>
+    
+    <div class="compo_box">
+        <h1>사이드 바</h1>
+        <p>*그냥 갖다 사용*</p>
+        <div style="width: max-content; margin: 0 auto;">
+            아직 만드는 중.... 사실 시작 못함... 조셉 여기서 잠들다...
         </div>
     </div>
 
