@@ -194,11 +194,33 @@
     </div>
     
     <div class="compo_box">
-        <h1>사이드 바</h1>
+        <h1>인풋</h1>
         <p>*그냥 갖다 사용*</p>
-        <div style="width: max-content; margin: 0 auto;">
-            아직 만드는 중.... 사실 시작 못함... 조셉 여기서 잠들다...
+        <div style="width: max-content; margin: 0 auto 30px;">
+            <input type="text" class="common_txt_ipt" placeholder="초상권 계약과 관련된 코멘트를 입력해 주세요" style="width: 720px; height: 50px;">
         </div>
+        
+        <div style="width: max-content; margin: 0 auto 30px;">
+            <div class="number_ipt_wrap">
+                <button type="button" class="num_ipt_down_btn"></button>
+                <input type="number" name="number" min="0" step="500" style="width: 720px; height: 50px;">
+                <button type="button" class="num_ipt_up_btn"></button>
+            </div>
+        </div>
+        
+        <div style="width: max-content; margin: 0 auto 30px;">
+            <div class="file_ipt_wrap">
+                <label class="btn_common btn_strok_white" for="ipt_video_file">동영상 업로드</label>
+                <input type="file" id="ipt_video_file" class="ex_file" multiple>
+                <ul class="file_list">
+                    <li>
+                        <span class="file_name">asdasd</span>
+                        <button class="file_remove_btn ico_gray_close"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
     <script src="./js/common.js"></script>

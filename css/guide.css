@@ -331,3 +331,109 @@
     -webkit-appearance: none;
   }
 /* multi range end */
+
+
+/* input style */
+.common_txt_ipt{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: none;
+    width: 100%;
+    padding: 0 16px;
+    border: 1px solid #ECECEC;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #000;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    background-color: #fff;
+    transition: border-color .2s;
+}
+.common_txt_ipt::placeholder{
+    color: #7D7D7D;
+    opacity: .3;
+}
+.common_txt_ipt:focus{
+    border-color: #14C7C9;
+}
+
+.number_ipt_wrap{
+    position: relative;
+}
+.number_ipt_wrap input[type="number"]{
+    width: 100%;
+    height: 68px;
+    padding: 0 40px 0 16px;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    transition: border-color .2s;
+}
+.number_ipt_wrap input[type="number"]:focus{
+    border-color: #14C7C9;
+}
+.number_ipt_wrap .num_ipt_down_btn,
+.number_ipt_wrap .num_ipt_up_btn{
+    position: absolute;
+    right: 16px;
+    z-index: 1;
+    width: 12px;
+    height: 8.25px;
+    background: url("../images/icons/ico_num_arrow.svg") no-repeat center / cover;
+}
+.number_ipt_wrap .num_ipt_down_btn{
+    transform: rotate(180deg);
+    bottom: 27.5%;
+}
+.number_ipt_wrap .num_ipt_up_btn{
+    right: 16px;
+    top: 27.5%;
+}
+
+
+.file_ipt_wrap{
+    margin-top: 100px;
+    position: relative;
+}
+.file_ipt_wrap label{
+    position: absolute;
+    right: 0;
+    top: -76px;
+    width: 224px;
+    height: 64px;
+}
+.file_ipt_wrap input[type="file"]{
+    display: none;
+}
+.file_ipt_wrap .file_list{
+    width: 720px;
+    min-height: 64px;
+    padding: 24px 33px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    border-radius: 20px;
+}
+.file_ipt_wrap .file_list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #7D7D7D;
+}
+.file_ipt_wrap .file_list li span{
+    display: block;
+    white-space: nowrap;
+    width: calc(100% - 30px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.file_ipt_wrap .file_list li:not(:last-child){
+    margin-bottom: 8px;
+}
+/* input style end */
