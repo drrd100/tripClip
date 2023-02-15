@@ -1,3 +1,4 @@
+
 (function(){
     let mainJS = {
         accoEvt:function(){
@@ -15,6 +16,7 @@
                 });
             }
             HamburgerEve();
+
             function gnbEvt(){
                 let category = document.querySelectorAll(".gnb_mo > li > a");
                 let i;
@@ -32,12 +34,41 @@
                 }
             }
             gnbEvt();
+        },
+        videoEvt:function(){
+            let item = document.querySelectorAll(".sec_search_result .item");
+
+            for(i = 0; i < item.length; i++){
+                item[i].addEventListener('mouseenter', function(){
+                    let thumbBox = this.children[0];
+                    let video = thumbBox.children[1];
+
+                    async function playVideo() {
+                        try {
+                            await video.play();
+                        } catch (err) {
+                            console(err);
+                        }
+                    }
+                    video.classList.add("on");
+                    playVideo();
+                });
+
+                item[i].addEventListener('mouseleave', function(){
+                    let thumbBox = this.children[0];
+                    let video = thumbBox.children[1];
+                    video.classList.remove("on");
+                    video.pause();
+
+                });
+            }
             
 
-
+            
         },
         init:function(){
             this.accoEvt();
+            this.videoEvt();
         }
     }
     mainJS.init();
