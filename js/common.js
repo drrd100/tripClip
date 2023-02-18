@@ -56,10 +56,14 @@
             gnbEvt();
         },
         videoEvt:function(){
-            let item = document.querySelectorAll(".sec_search_result .item");
-
+            let item = document.querySelectorAll("#video_list .item");
+            // function loader(){
+            //     curItem.classList.remove("loader");
+            //     playVideo();
+            // }
             for(i = 0; i < item.length; i++){
                 item[i].addEventListener('mouseenter', function(){
+                    let curItem = this
                     let thumbBox = this.children[0];
                     let video = thumbBox.children[1];
 
@@ -67,7 +71,9 @@
                         try {
                             await video.play();
                         } catch (err) {
-                            console(err);
+                            console.log(err);
+                            
+                            loader();
                         }
                     }
                     video.classList.add("on");

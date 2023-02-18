@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/icons.css">
     <link rel="stylesheet" href="./css/guide.css">
+    <link rel="stylesheet" href="./css/search_result.css">
+
 </head>
 <body>
     <header id="header">
@@ -101,170 +103,320 @@
             </li>
         </ul>
     </header>
-    <section class="sec_search_result">
-        <div class="inner">
-            <div class="search_wrap">
-                    <div class="input_wrap">
-                        <input type="text" placeholder="나라이름을 검색해보세요!">
-                        <button type="button" class="filter_open_btn">필터</button>
-                    </div>
-                    <button class="btn_common btn_blue shadow search_btn">검색</button>
-                    <div class="filter_wrap">
-                        <div class="filter_group">
-                            <div class="filter_box">
-                                <p class="tit">촬영 장비</p>
-                                <div class="select_wrap">
-                                    <ul>
-                                        <li><button class="select_btn">전부</button></li>
-                                        <li><button>전부</button></li>
-                                        <li><button>드론</button></li>
-                                        <li><button>스마트폰</button></li>
-                                        <li><button>DSLR</button></li>
-                                        <li><button>짐벌</button></li>
-                                        <li><button>슬라이드</button></li>
-                                        <li><button>액션 캠</button></li>
-                                        <li><button>기타</button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="filter_box">
-                                <p class="tit">촬영 형식</p>
-                                <div class="select_wrap">
-                                    <ul>
-                                        <li><button class="select_btn">전부</button></li>
-                                        <li><button>전부</button></li>
-                                        <li><button>일반</button></li>
-                                        <li><button>슬로우</button></li>
-                                        <li><button>타임랩스</button></li>
-                                        <li><button>하이퍼 랩스</button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="filter_box">
-                                <p class="tit">카테고리</p>
-                                <div class="select_wrap">
-                                    <ul>
-                                        <li><button class="select_btn">전부</button></li>
-                                        <li><button>전부</button></li>
-                                        <li><button>일반</button></li>
-                                        <li><button>인물</button></li>
-                                        <li><button>자연</button></li>
-                                        <li><button>동물</button></li>
-                                        <li><button>랜드 마크</button></li>
-                                        <li><button>음식</button></li>
-                                        <li><button>비즈니스</button></li>
-                                        <li><button>예술</button></li>
-                                        <li><button>기술</button></li>
-                                        <li><button>크리에이터</button></li>
-                                        <li><button>체험</button></li>
-                                        <li><button>기계</button></li>
-                                    </ul>
-                                </div>
-                            </div>
+    <main class="common_wrap search_result_detail">
+        <section class="sec_info">
+            <div class="inner">
+                <div class="search_wrap">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="나라이름을 검색해보세요!">
+                            <button type="button" class="filter_open_btn">필터</button>
                         </div>
-                        <div class="filter_box">
-                            <p class="tit">가격(KRW)</p>
-                            <div class="middle">
-                                <div class="multi-range-slider">
-                                  <!-- 진짜 슬라이더 -->
-                                  <input type="range" id="input-left" min="1000" max="100000" value="1000" step="1000" />
-                                  <input type="range" id="input-right" min="1000" max="100000" value="100000"  step="1000" />
-                              
-                                  <!-- 커스텀 슬라이더 -->
-                                  <div class="slider">
-                                    <div class="track"></div>
-                                    <div class="range"></div>
-                                    <div class="thumb left"></div>
-                                    <div class="thumb right"></div>
-                                  </div>
-                                </div>
-                                <div class="middle_bottom">
-                                    <div class="range_text">
-                                        <span class="min_txt">1000</span>
-                                        -
-                                        <span class="max_txt">100000</span>
+                        <button class="btn_common btn_blue shadow search_btn">검색</button>
+                        <div class="filter_wrap">
+                            <div class="filter_group">
+                                <div class="filter_box">
+                                    <p class="tit">촬영 장비</p>
+                                    <div class="select_wrap">
+                                        <ul>
+                                            <li><button class="select_btn">전부</button></li>
+                                            <li><button>전부</button></li>
+                                            <li><button>드론</button></li>
+                                            <li><button>스마트폰</button></li>
+                                            <li><button>DSLR</button></li>
+                                            <li><button>짐벌</button></li>
+                                            <li><button>슬라이드</button></li>
+                                            <li><button>액션 캠</button></li>
+                                            <li><button>기타</button></li>
+                                        </ul>
                                     </div>
-                                    <div class="checkbox_wrap">
-                                        <input type="checkbox" id="fps_checkbox">
-                                        <label for="fps_checkbox">60 fps 초과</label>
+                                </div>
+                                <div class="filter_box">
+                                    <p class="tit">촬영 형식</p>
+                                    <div class="select_wrap">
+                                        <ul>
+                                            <li><button class="select_btn">전부</button></li>
+                                            <li><button>전부</button></li>
+                                            <li><button>일반</button></li>
+                                            <li><button>슬로우</button></li>
+                                            <li><button>타임랩스</button></li>
+                                            <li><button>하이퍼 랩스</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="filter_box">
+                                    <p class="tit">카테고리</p>
+                                    <div class="select_wrap">
+                                        <ul>
+                                            <li><button class="select_btn">전부</button></li>
+                                            <li><button>전부</button></li>
+                                            <li><button>일반</button></li>
+                                            <li><button>인물</button></li>
+                                            <li><button>자연</button></li>
+                                            <li><button>동물</button></li>
+                                            <li><button>랜드 마크</button></li>
+                                            <li><button>음식</button></li>
+                                            <li><button>비즈니스</button></li>
+                                            <li><button>예술</button></li>
+                                            <li><button>기술</button></li>
+                                            <li><button>크리에이터</button></li>
+                                            <li><button>체험</button></li>
+                                            <li><button>기계</button></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+                            <div class="filter_box">
+                                <p class="tit">가격(KRW)</p>
+                                <div class="middle">
+                                    <div class="multi-range-slider">
+                                      <!-- 진짜 슬라이더 -->
+                                      <input type="range" id="input-left" min="1000" max="100000" value="1000" step="1000" />
+                                      <input type="range" id="input-right" min="1000" max="100000" value="100000"  step="1000" />
+                                  
+                                      <!-- 커스텀 슬라이더 -->
+                                      <div class="slider">
+                                        <div class="track"></div>
+                                        <div class="range"></div>
+                                        <div class="thumb left"></div>
+                                        <div class="thumb right"></div>
+                                      </div>
+                                    </div>
+                                    <div class="middle_bottom">
+                                        <div class="range_text">
+                                            <span class="min_txt">1000</span>
+                                            -
+                                            <span class="max_txt">100000</span>
+                                        </div>
+                                        <div class="checkbox_wrap">
+                                            <input type="checkbox" id="fps_checkbox">
+                                            <label for="fps_checkbox">60 fps 초과</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="title_box">
+                    <h2>검색결과</h2>
+                </div>
+               <div class="info_warp">
+                    <div class="thumb_area">
+                        <div class="video_box">
+                            <video width="100%" height="100%">
+                                <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                            </video>
+                        </div>
+                        <div class="keyword_box">
+                            <h3>키워드</h3>
+                            <ul class="keyword_list">
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다생물</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다생물</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다거북</a></li>
+                                <li><a href="/" class="btn_common btn_gray" >바다생물</a></li>
+                            </ul>
                         </div>
                     </div>
-            </div>
-            <div class="title_box">
-                <h2>검색결과</h2>
-            </div>
-           <div class="info_warp">
-                <div class="thumb_area">
-                    <div class="video_box">
-                        <video src=""></video>
-                    </div>
-                    <div class="keyword_box">
-                        <h3>키워드</h3>
-                        <ul class="keyword_list">
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info_area">
-                    <div class="user_box">
-                        <div class="profile">
-                            <img src="" alt="">
+                    <div class="info_area">
+                        <div class="user_box shadow">
+                            <div class="profile">
+                                <img src="./images/icons/ico_profile.svg" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <span>작성자</span>
+                                    <p>트립클립매니아</p>
+                                </li>
+                                <li>
+                                    <span>동영상 ID</span>
+                                    <p>7555</p>
+                                </li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <span>작성자</span>
-                                <p>트립클립매니아</p>
-                            </li>
-                            <li>
-                                <span>동영상 ID</span>
-                                <p>7555</p>
-                            </li>
-                        </ul>
+                        <div class="info_box">
+                            <ul class="summary_list">
+                                <li>FHD</li>
+                                <li>1920X1080</li>
+                                <li>30 FPS</li>
+                                <li>MP4</li>
+                                <li>42.43MB</li>
+                            </ul>
+                            <ul class="info_list">
+                                <li>
+                                    <span>클립재생시간</span>
+                                    <p>0:00:08</p>
+                                </li>
+                                <li>
+                                    <span>종횡비</span>
+                                    <p>16:9</p>
+                                </li>
+                                <li>
+                                    <span>관련정보</span>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>촬영장비</dt>
+                                        <dd>DSLR</dd>
+                                        <dt>촬영 형식</dt>
+                                        <dd>타입랩스</dd>
+                                        <dt class="mb_0">카테고리</dt>
+                                        <dd>자연</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="price_box">
+                            <span>금액</span>
+                            <p>1,120</p>
+                        </div>
+                        <div class="btn_box">
+                            <button class="btn_common btn_green shadow buy">바로 구매</button>
+                            <button class="btn_common btn_strok_white cart">장바구니 담기</button>
+                            <button class="btn_common btn_strok_white preview">미리보기 다운로드</button>
+                        </div>
                     </div>
-                    <div class="info_box">
-                        <ul class="summary_list">
-                            <li>FHD</li>
-                            <li>1920ㅌ1080</li>
-                            <li>30 FPS</li>
-                            <li>MP4</li>
-                            <li>42.43MB</li>
-                        </ul>
-                        <ul class="info_list">
-                            <li>
-                                <span>클립재생시간</span>
-                                <p>0:00:08</p>
-                            </li>
-                            <li>
-                                <span>종횡비</span>
-                                <p>16:9</p>
-                            </li>
-                            <li>
-                                <span>관련정보</span>
-                                <dl>
-                                    <dt>촬영장비</dt>
-                                    <dd>DSLR</dd>
-                                    <dt>촬영 형식</dt>
-                                    <dd>타입랩스</dd>
-                                    <dt>카테고리</dt>
-                                    <dd>자연</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="price_box">
-                        <span>금액</span>
-                        <p>1,120</p>
-                    </div>
-                    <div class="btn_box">
-                        
-                    </div>
+               </div>
+            </div>
+        </section>
+        <section class="sec_add">
+            <div class="inner">
+                <div class="video_box">
+                    <p class="title">관련 동영상 및 추천 동영상</p>
+                    <ul class="video_list" id="video_list">
+                        <li>
+                            <a href="" class="item loader">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%" onloadeddata="loader()">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="item">
+                                <div class="thumb_box">
+                                    <img src="./images/result_thumb.png" alt="">
+                                    <video width="100%" height="100%">
+                                        <source src="https://kr.object.ncloudstorage.com/tripclip-movie-samples/sample_ea212c49-80c7-4596-aeb6-a0ea80159340.mp4">
+                                    </video>
+                                </div>
+                                <div class="text_box">
+                                    <p>에메랄드빛 양면의 양면, 몰디브</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-           </div>
-        </div>
-    </section>
+                <div class="map_box">
+                    <p class="title">지도</p>
+                    <div class="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     
     <footer id="footer">
         <div class="inner">
@@ -293,6 +445,6 @@
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/common.js"></script>
 </body>
 </html>
