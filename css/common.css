@@ -15,7 +15,7 @@ img{max-width: 100%;}
 /*
     header
 */
-#header{position: fixed; top: 0; left: 0; width: 100%; height: 92px; z-index: 20; background-color: #fff;}
+#header{position: fixed; top: 0; left: 0; width: 100%; height: 92px; z-index: 100; background-color: #fff;}
 #header .inner{display: flex; justify-content: space-between; align-items: center;}
 #header h1 a{display: inline-block; width: 165px;}
 #header h1 a img{width: 100%;}
@@ -153,7 +153,7 @@ img{max-width: 100%;}
     position: absolute;
     left: 50%;
     top: 100%;
-    z-index: 10;
+    z-index: 50;
     transform: translateX(-50%);
     width: calc(100% - 72px);
     max-width: 1128px;
@@ -457,8 +457,66 @@ img{max-width: 100%;}
     border-color: #14C7C9;
 }
 
+.keyword_wrap{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    padding: 0 16px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    background-color: #fff;
+    transition: border-color .2s;
+}
+.keyword_wrap:focus-within{
+    border-color: #14C7C9;
+}
+.keyword_list{
+    display: flex; 
+    gap: 8px;
+    margin-right: 8px;
+}
+.keyword_list .keyword{ 
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 30px;
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+.keyword_list .keyword span{
+    white-space: nowrap;
+} 
+.keyword_list .keyword i{
+    width: 16px;
+    height: 16px;
+}
+.common_keyword_ipt{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+}
+
 .number_ipt_wrap{
     position: relative;
+}
+.number_ipt_wrap .num_txt{
+    position: absolute;
+    right: 0;
+    top: -24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7d7d7d;
 }
 .number_ipt_wrap input[type="number"]{
     width: 100%;
@@ -495,13 +553,14 @@ img{max-width: 100%;}
 
 
 .file_ipt_wrap{
-    margin-top: 100px;
+    /* margin-top: 76px; */
+    margin-top: 12px;
     position: relative;
 }
-.file_ipt_wrap label{
-    position: absolute;
-    right: 0;
-    top: -76px;
+label.file_ipt_btn{
+    /* position: absolute; */
+    /* right: 0; */
+    /* top: -76px; */
     width: 224px;
     height: 64px;
 }
@@ -509,7 +568,7 @@ img{max-width: 100%;}
     display: none;
 }
 .file_ipt_wrap .file_list{
-    width: 720px;
+    min-width: 720px;
     min-height: 64px;
     padding: 24px 33px;
     border: 1px solid #ECECEC;

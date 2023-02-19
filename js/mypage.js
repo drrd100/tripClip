@@ -5,16 +5,37 @@
             // input number event
             const numIptUpBtn = document.querySelector(".num_ipt_up_btn");
             const numIptDownBtn = document.querySelector(".num_ipt_down_btn");
+            const numIptEl = document.querySelector("input[type='number']");
 
             function clickNumIptUp(){
                 this.parentNode.querySelector("[type=number]").stepUp();
+                this.parentNode.querySelector(".num_txt").innerHTML = `
+                    ₩ ${this.parentNode.querySelector("[type=number]").value}
+                `;
             }
             function clickNumIptDown(){
                 this.parentNode.querySelector("[type=number]").stepDown();
+                this.parentNode.querySelector(".num_txt").innerHTML = `
+                    ₩ ${this.parentNode.querySelector("[type=number]").value}
+                `;
+            }
+            function changeNumIptEvt(){
+                let thisNum = this.value;
+                if(thisNum != 0 ){
+                    this.parentNode.querySelector('.num_txt').innerHTML = `
+                        ₩ ${thisNum}
+                    `;
+                }else{
+                    this.parentNode.querySelector('.num_txt').innerHTML = `
+                        ₩ 0
+                    `;
+                    this.value = 0;
+                }
             }
 
             numIptUpBtn.addEventListener("click",clickNumIptUp);
-            numIptDownBtn.addEventListener("click",clickNumIptDown);            
+            numIptDownBtn.addEventListener("click",clickNumIptDown);        
+            numIptEl.addEventListener("change",changeNumIptEvt);    
         },
         iptFileEvt:function(){
             // input file event

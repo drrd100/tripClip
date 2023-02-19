@@ -4,6 +4,7 @@
         selectEvt:function(){
             // select event
             const selectBtns = document.querySelectorAll(".select_wrap button");
+            const selectEl = document.querySelectorAll(".select_wrap");
             
             function clickSelectEvt(){
                 let thisTxt = this.innerText;
@@ -20,6 +21,10 @@
             selectBtns.forEach((selectBtn)=>{
                 selectBtn.addEventListener("click", clickSelectEvt);
             });
+
+            for(let i = selectEl.length; i > 0; i--){
+                selectEl[selectEl.length-i].querySelector("ul").style.zIndex = `${i + 10}`;
+            }
         },
         accoEvt:function(){
             function HamburgerEve(){
