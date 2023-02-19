@@ -1,0 +1,132 @@
+/* mypage side */
+.mypage_side{
+    padding: 40px 0 15px;
+    width: 274px;
+    height: max-content;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    border-radius: 24px;
+}
+.mypage_side .tit{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 32px;
+    padding-bottom: 20px;
+}
+.mypage_side .mypage_list > li > a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px 20px 16px 32px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.mypage_side .mypage_list > li > a.on{
+    color: #14C7C9;
+}
+.mypage_side .mypage_list > li > a.on::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/ico_blue_arrow.svg") no-repeat center / cover;
+}
+.mypage_side .mypage_list > li > a [class*="ico_"]{
+    margin-right: 12px;
+}
+.mypage_side .mypage_list_depth2 a{
+    display: block;
+    padding: 18px 48px;
+    font-size: 20px;
+    color: #7d7d7d;
+}
+.mypage_side .mypage_list_depth2 a.on{
+    background-color: #F4F8FA;
+    color: #000;
+}
+/* mypage side end */
+
+
+/* mypage content */
+.sec_mypage .inner{
+    display: flex;
+}
+.sec_mypage .mypage_wrap{
+    margin-left: 32px;
+    margin-top: 30px;
+    width: calc(100% - 274px - 32px);
+}
+.sec_mypage .mypage_wrap .col2{
+    display: flex; 
+    gap: 32px; 
+    margin-bottom: 24px;
+}
+.sec_mypage .mypage_wrap .col2 .col .tit,
+.sec_mypage .mypage_wrap .col.between .tit{
+    margin-bottom: 0;
+}
+.sec_mypage .mypage_wrap .col{
+    display: flex; 
+    flex: 1;
+}
+.sec_mypage .mypage_wrap .col.between{
+    justify-content: space-between;
+}
+.sec_mypage .mypage_wrap .col.flex-end{
+    justify-content: flex-end;
+}
+.sec_mypage .mypage_wrap .col .tit{
+    display: flex;
+    align-items: center;
+    min-width: 98px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.sec_mypage .mypage_wrap .col .info_txt{
+    font-size: 16px;
+    font-weight: 400;
+    color: #7d7d7d;
+}
+.sec_mypage .mypage_wrap .col .select_wrap button{
+    color: #7d7d7d;
+}
+.sec_mypage .mypage_wrap .col .common_txt_ipt.mb{margin-bottom: 32px;}
+.sec_mypage .mypage_wrap .col .common_txt_ipt{ width: 100%; height: 52px; margin-top: 12px;}
+.sec_mypage .mypage_wrap .col p.tit + .common_txt_ipt{margin-top: 0;}
+.sec_mypage .mypage_wrap .col .file_ipt_wrap{width: 100%; margin-bottom: 32px;}
+.sec_mypage .mypage_wrap .col .file_ipt_wrap .file_list{width: 100%;}
+.sec_mypage .mypage_wrap .col .checkbox_wrap{margin-top: 16px; justify-content: flex-end;}
+.sec_mypage .mypage_wrap .col .number_ipt_wrap{width: 100%; height: 68px; margin-bottom: 32px;}
+
+.sec_mypage .map_info_txt{
+    width: 100%;
+    padding: 28px 24px;
+    margin-bottom: 12px;
+    background: #F8F8F8;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 4px 12px 12px rgba(242, 242, 242, 0.25);
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7D7D7D;
+    line-height: 1.35;
+}
+.sec_mypage .map_wrap{
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    background-color: #F8F8F8;
+    overflow: hidden;
+}
+.sec_mypage .save_btn{
+    margin: 66px auto 76px;
+    width: 463px;
+    height: 64px;
+}
+
+/* mypage content end */

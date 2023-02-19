@@ -9,6 +9,12 @@
 .ico_star.active{
     background: url("../images/icons/ico_star_active.svg") no-repeat center / cover;
 }
+.ico_black_star{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico_black_star.svg") no-repeat center / cover;
+}
 .ico_share{
     display: inline-block;
     width: 24px;
