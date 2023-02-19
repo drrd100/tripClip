@@ -541,3 +541,43 @@ html, body {
     margin-right: 8px;
 }
 /* section app_download end */
+
+
+@media all and (max-width: 1200px){
+    
+}
+@media all and (max-width: 768px){
+    /* sec visual */
+    .sec_visual .inner{
+        padding: 160px 0;
+    }
+    .sec_visual .visual_txt_wrap .tit{
+        font-size: 48px;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+    .sec_visual .visual_txt_wrap .txt{
+        font-size: 20px;
+        margin-bottom: 44px;
+    }
+    .sec_visual .visual_txt_wrap .btn_common{
+        font-size: 16px;
+        height: 54px;
+    }
+    .sec_visual .visual_deco_wrap i:nth-of-type(1){
+        top: 78px;
+        width: 130px;
+        height: 130px;
+    }
+    .sec_visual .visual_deco_wrap i:nth-of-type(2){
+        bottom: -104px;
+        width: 220px;
+        height: 220px;        
+    }
+    .sec_visual .visual_deco_wrap i:nth-of-type(3){
+        top: 260px;
+        width: 180px;
+        height: 180px;
+    }
+    /* sec visual end */
+}
