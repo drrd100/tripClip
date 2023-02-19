@@ -27,20 +27,31 @@
             }
         },
         accoEvt:function(){
-            function HamburgerEve(){
+            function HamburgerEvt(){
                 let btnMenu = document.querySelector(".btn_hamburger");
                 let gnb = document.querySelector(".gnb_mo");
-                let i;
 
                 btnMenu.addEventListener("click", function() {
+                    let category = document.querySelectorAll(".gnb_mo > li > a");
+                    let depth = document.querySelectorAll(".gnb_mo .depth");
+                    let i,j;
+
+                    for(i=0; i < category.length; i++){
+                        category[i].classList.remove("active");
+                    }
+
+                    for(j=0; j < depth.length; j++){
+                        depth[j].style.maxHeight = null;
+                    }
+
                     if (gnb.style.maxHeight){
                         gnb.style.maxHeight = null;
                     } else {
-                        gnb.style.maxHeight = gnb.scrollHeight + "px";
+                        gnb.style.maxHeight = "620px";
                     } 
                 });
             }
-            HamburgerEve();
+            HamburgerEvt();
 
             function gnbEvt(){
                 let category = document.querySelectorAll(".gnb_mo > li > a");
@@ -61,14 +72,10 @@
             gnbEvt();
         },
         videoEvt:function(){
-            let item = document.querySelectorAll(".video_list .item");
-            // function loader(){
-            //     curItem.classList.remove("loader");
-            //     playVideo();
-            // }
+            let item = document.querySelectorAll("#video_list .item");
+            
             for(i = 0; i < item.length; i++){
                 item[i].addEventListener('mouseenter', function(){
-                    let curItem = this
                     let thumbBox = this.children[0];
                     let video = thumbBox.children[1];
 
@@ -77,8 +84,6 @@
                             await video.play();
                         } catch (err) {
                             console.log(err);
-                            
-                            loader();
                         }
                     }
                     video.classList.add("on");
@@ -90,7 +95,6 @@
                     let video = thumbBox.children[1];
                     video.classList.remove("on");
                     video.pause();
-
                 });
             }
         },
