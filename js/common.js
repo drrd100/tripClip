@@ -56,7 +56,7 @@
             gnbEvt();
         },
         videoEvt:function(){
-            let item = document.querySelectorAll("#video_list .item");
+            let item = document.querySelectorAll(".video_list .item");
             // function loader(){
             //     curItem.classList.remove("loader");
             //     playVideo();

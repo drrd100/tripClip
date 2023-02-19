@@ -3,14 +3,15 @@
     let mainJS = {
 
         swiperEvt:function(){
-          let videoSlider = document.querySelector('.sec_video.swiper-area');
-          videoSlider.querySelectorAll('.swiper-container').forEach(function(slide,idx){
+          let authorSlider = document.querySelector('.sec_best_author.swiper-area');
+          authorSlider.querySelectorAll('.swiper-container').forEach(function(slide,idx){
             let slider = new Swiper(slide,{
-              slidesPerView: 'auto',
-              centeredSlides: true,
               observer: true,
-              observeParents: true,
               loop: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
             });
           });
         },
