@@ -9,7 +9,7 @@ img{max-width: 100%;}
     .inner{width: calc(100% - 30px);}
 }
 @media (max-width: 768px) {
-    .inner{width: calc(100% - 15px);}
+    .inner{width: calc(100% - 30px);}
     .m_hide_768{display: none !important;}
     main{margin-top: 64px;}
 }
@@ -55,8 +55,13 @@ img{max-width: 100%;}
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
     #header{height: 64px;}
     #header .inner{height: 64px;}
+=======
+    #header .inner {height: 100%;}
+    #header {height: 64px;}
+>>>>>>> sy
     #header h1 a{display: inline-block; width: 110px;}
     #header .right{display: none; padding-right: 0;}
     #header a{width: 120px;}
