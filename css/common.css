@@ -9,7 +9,7 @@ img{max-width: 100%;}
     .inner{width: calc(100% - 30px);}
 }
 @media (max-width: 768px) {
-    .inner{width: calc(100% - 15px);}
+    .inner{width: calc(100% - 30px);}
     .m_hide_768{display: none !important;}
     main{margin-top: 64px;}
 }
