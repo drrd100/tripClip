@@ -72,16 +72,8 @@
             gnbEvt();
         },
         videoEvt:function(){
-<<<<<<< HEAD
             let item = document.querySelectorAll("#video_list .item");
             
-=======
-            let item = document.querySelectorAll(".video_list .item");
-            // function loader(){
-            //     curItem.classList.remove("loader");
-            //     playVideo();
-            // }
->>>>>>> sy
             for(i = 0; i < item.length; i++){
                 item[i].addEventListener('mouseenter', function(){
                     let thumbBox = this.children[0];
