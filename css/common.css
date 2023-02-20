@@ -12,6 +12,7 @@ img{max-width: 100%;}
     .inner{width: calc(100% - 30px);}
     .m_hide_768{display: none !important;}
     main{margin-top: 64px;}
+    main.common_wrap{margin-top: 80px;}
 }
 /*
     header
@@ -56,11 +57,16 @@ img{max-width: 100%;}
 
 @media (max-width: 768px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     #header{height: 64px;}
     #header .inner{height: 64px;}
 =======
     #header .inner {height: 100%;}
     #header {height: 64px;}
+>>>>>>> sy
+=======
+    #header{height: 64px;}
+    #header .inner{height: 64px;}
 >>>>>>> sy
     #header h1 a{display: inline-block; width: 110px;}
     #header .right{display: none; padding-right: 0;}
@@ -1169,8 +1175,8 @@ label.file_ipt_btn{
         top: 100%;
         z-index: 50;
         transform: translateX(-50%);
-        width: calc(100% - 9.38vw);
-        max-width: 146.88vw;
+        width: 100%;
+        max-width: calc(100% - 30px);
         padding: 0 6.77vw 4.43vw;
         background: #FFFFFF;
         border: 0.13vw solid #ECECEC;
@@ -1186,6 +1192,7 @@ label.file_ipt_btn{
     }
     .search_wrap .filter_wrap .filter_group{
         display: flex;
+        flex-direction: column;
         gap: 4.17vw;
         justify-content: space-between;
         padding-top: 4.17vw;

@@ -268,7 +268,7 @@
 @media (max-width:768px){
     .mypage_side{
         padding: 5.21vw 0 1.95vw;
-        width: 35.68vw;
+        width: 100%;
         height: max-content;
         border: 0.13vw solid #ECECEC;
         box-shadow: 0.00vw 0.52vw 1.56vw 1.56vw rgba(242, 242, 242, 0.25);
@@ -333,7 +333,7 @@
         margin-bottom: 0vw;
     }
     .sec_mypage .mypage_wrap .col2 .col .tit{
-        margin-bottom: 4vw;
+        margin-bottom: 2vw;
         margin-top: 8vw;
     }
     .sec_mypage .mypage_wrap .col.between .tit{
@@ -346,12 +346,11 @@
     }
     .sec_mypage .mypage_wrap .col.title_col{
         margin-top: 8vw;
-        margin-bottom: 4vw;
+        margin-bottom: 2vw;
     }
     .sec_mypage .mypage_wrap .col.between{
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
     }
     .sec_mypage .mypage_wrap .col.flex-end{
         justify-content: flex-end;
@@ -370,7 +369,8 @@
     .sec_mypage .mypage_wrap .col.desc .info_txt{
         position: absolute;
         left: 2vw;
-        bottom: -18vw;
+        font-size: 2vw;
+        bottom: -14vw;
     }
     .sec_mypage .mypage_wrap .col .info_txt{
         font-size: 2.5vw;
