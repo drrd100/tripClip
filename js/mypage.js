@@ -66,10 +66,46 @@
                 fileIpt.addEventListener("change", changeFileIpt);
             });
         },
+        accoEvt:function(){
+            function mypageDepthEvt(){
+                let uploadDepth = document.querySelector(".mypage_side > h3.tit");
+                let depth = document.querySelector(".mypage_side > .mypage_list")
+
+                uploadDepth.addEventListener("click", function() {
+                    
+                    if (depth.style.maxHeight){
+                        depth.style.maxHeight = null;
+                        uploadDepth.classList.remove("on");
+                    } else {
+                        depth.style.maxHeight = "920px";
+                        uploadDepth.classList.add("on");
+                    } 
+                });
+            }
+            mypageDepthEvt();
+
+            function uploadDepthEvt(){
+                let uploadDepth = document.querySelector(".mypage_list > li > a.arrow");
+                let depth = document.querySelector(".mypage_list_depth2")
+
+                uploadDepth.addEventListener("click", function() {
+                    
+                    if (depth.style.maxHeight){
+                        depth.style.maxHeight = null;
+                        uploadDepth.classList.remove("on");
+                    } else {
+                        depth.style.maxHeight = "620px";
+                        uploadDepth.classList.add("on");
+                    } 
+                });
+            }
+            uploadDepthEvt();
+        },
 
         init:function(){
             this.iptFileEvt();
             this.iptNumberEvt();
+            this.accoEvt();
         }
     }
     myPageJS.init();

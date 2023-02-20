@@ -805,6 +805,25 @@ html, body {
 
 
 @media all and (max-width: 480px){
+    .sec_visual .visual_txt_wrap .tit{
+        font-size: 38px;
+    }
+    .sec_visual .visual_txt_wrap .txt{
+        font-size: 18px;
+    }
+    .sec_visual .visual_txt_wrap .btn_common{
+        width: 140px;
+        height: 40px;
+    }
+    .sec_tit_wrap .tit{
+        font-size: 22px;
+    }
+    .sec_banner .banner_txt_wrap .tit{
+        font-size: 22px;
+    }
+    .sec_banner .banner_txt_wrap .txt{
+        font-size: 13px;
+    }
     /* sec best clip */
     .sec_best_clip .best_clip_list li{
         width: 100%;
@@ -825,6 +844,13 @@ html, body {
     .sec_best_clip .best_clip_list .item .text_box p{
         font-size: 4.17vw;
     }
+    .sec_best_clip .btn_box .btn_more{
+        width: 46vw;
+        line-height: 13vw;
+        font-size: 4vw;
+        border-radius: 3vw;
+    }
+
     /* sec best clip end */
 
     /* sec best author */
@@ -837,6 +863,9 @@ html, body {
     .sec_banner .img_box{
         width: 54.167vw;
         height: 43.125vw;
+    }
+    .sec_best_author .clip_list .item .text_box{
+        padding: 6px 0;
     }
     /* sec banner end */
 }
