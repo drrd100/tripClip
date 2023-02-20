@@ -81,6 +81,14 @@ button{
 }
 button:focus{outline: none;}
 
+input[type='checkbox']{
+	-webkit-appearance:none;
+	-moz-appearance: none;
+	-o-appearance:none;
+	appearance: none;
+	border-radius: 0 !important;
+}
+
 /* 스크롤 바 커스텀 */
 .scrollbar_custom::-webkit-scrollbar {width: 18px;}
 .scrollbar_custom::-webkit-scrollbar-track {border-radius: 10px;}

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+table {border-collapse:collapse;border-spacing:0;}
+table th, strong {font-weight:normal;}
+body{margin:20px;}
+h1{margin:0 0 10px 0;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+.list_w table {width:100%;margin:20px auto;border-top: solid 2px #555;border-collapse:collapse;border-spacing:0;font-size:13px;text-align:center;}
+.list_w table tr:hover {background:#f3f3f3;}
+.list_w table th {	padding: 10px 0;	border: solid 1px #ddd;	background: #efefef;vertical-align:middle;}
+.list_w table td {padding: 5px 3px;border:solid 1px #ccc;vertical-align:middle;}
+.list_w table tr.on td {background: #ffcc99;}
+.list_w table tr.title th {background:#666;color:#fff;font-size:18px;border:0;padding-top:7px;}
+.lastmdate {color: #1155CC;}
+.stand_by {color:#777;}
+.ing {color:#4848D4;}
+.end {color:green;}
+.list_w table td.link,
+.list_w table td.etc{text-align: left; padding-left:10px;}
+</style>
+</head>
+<body id="guide">
+<!-- eniter wrap -->
+<div id="guide_wrap">
+	<div class="header">
+		<h1>트립클립 TripClip</h1>
+		<p>End page : <span class="curr_n"></span>page / Total page : <span class="total_n"></span>page</p>
+		<p>진행율 : <span class="per"></span></p>
+		<hr />
+	</div>
+	<div class="list_w">
+		<table class="codinglist">
+			<colgroup>
+				<col width="4%" />
+				<col width="10%" />
+				<col width="12%" />
+				<col width="12%" />
+				<col width="12%" />
+				<col width="8%" />
+				<col width="5%" />
+				<col width="" />
+			</colgroup>
+			<thead>
+				<tr class="title">
+					<th colspan="8">테이블 제목</th>
+				</tr>
+				<tr>
+					<th rowspan="2">no.</th>
+					<th colspan="3">navi</th>
+					<th rowspan="2">filename/link</th>
+					<th rowspan="2">type</th>
+					<th rowspan="2">work</th>
+					<th rowspan="2">etc.</th>
+				</tr>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>3depth</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="no"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="link"><a href="./index.html" target="_blank">index.html</a></td>
+					<td class="space"></td>
+					<td class="work"></td>
+					<td class="etc">메인 페이지</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="link"><a href="./magazine.html" target="_blank">magazine.html</a></td>
+					<td class="space"></td>
+					<td class="work"></td>
+					<td class="etc">매거진 페이지</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="link"><a href="./mypage_upload.html" target="_blank">mypage_upload.html</a></td>
+					<td class="space"></td>
+					<td class="work"></td>
+					<td class="etc">마이페이지 - 업로드</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="link"><a href="./search_result.html" target="_blank">search_result.html</a></td>
+					<td class="space"></td>
+					<td class="work"></td>
+					<td class="etc">검색결과 페이지</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="link"><a href="./search_result_detail.html" target="_blank">search_result_detail.html</a></td>
+					<td class="space"></td>
+					<td class="work"></td>
+					<td class="etc">검색결과 페이지 - 상세</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $(".tab_menu li a").click(function () {
+        $(".tab_menu li a").removeClass("active");
+        $(this).addClass("active");
+        $(".list_w").hide().removeClass("codinglist")
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn().addClass("codinglist");
+		chkList();
+    });
+	chkList();
+});
+
+function chkList(){
+	var tatal_n = $(".codinglist tbody tr").length;
+	var curr_n = 0;
+	$(".codinglist th, .codinglist td").each(function() {
+		var thsWidth = $(this).width();
+		$(this).css('width',thsWidth);
+	});
+	$(".codinglist td a").each(function() {
+		$(this).parent().parent().find('.work').text('대기중').addClass('stand_by');
+		if($(this).attr('href') != '#'){
+			curr_n++;
+			$(this).parent().parent().find('.work').text('완료');
+			$(this).parent().parent().find('.work').addClass('end');
+		} else if ($(this).text().length > 0) {
+			$(this).parent().parent().find('.work').text('작업중').addClass('ing');
+		}
+	});
+
+
+	$(".codinglist tr").each(function() {
+		var index = $(".codinglist tr").not('.title').index(this) - 1;
+		$(this).children(".codinglist td.no").text(index);
+	});
+	$(".codinglist td").click(function() {
+		$(".codinglist tr").removeClass("on");
+		$(this).parent(".codinglist tr").addClass("on");
+	});
+	$('.total_n').text(tatal_n);
+	$('.curr_n').text(curr_n);
+	$('.per').text(Math.floor((curr_n/tatal_n)*100) + '%');
+}
+</script>
+</body>
+</html>
