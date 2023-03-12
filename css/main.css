@@ -117,10 +117,10 @@ html, body {
 }
 @keyframes fluffy_anim{
     0%{
-        transform: translateY(7%);
+        transform: translateY(15%);
     }
     100%{
-        transform: translateY(-5%);
+        transform: translateY(-10%);
     }
 }
 /* section visual end */
